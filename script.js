@@ -7,26 +7,38 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
+  
+  function generatePassword() {
+    var numCharacters = prompt("How long would you like the password to be (8-126 characters)?") 
+    console.log(numCharacters);
+    if (numCharacters != null && numCharacters != '') {
+      randomFunction();
+    }
+    else if (numCharacters === null) {
+      return;
+    }
+    else  {
+      generatePassword();
+    }
+  }
 }
+
+//Overall function
+function randomFunction() {
+  getRandomLowercaseLetter();
+  getRandomUppercaseLetter();
+  getRandomNumber();
+  getRandomSymbol();
+  console.log(getRandomSymbol());
+}
+
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
 
-//Alert box
-alert("Hello! I am an alert box!!");
-
-
-
-//Still working: Object of functions:
-var randomFunction = {
-  lowerLetter: getRandomLowercaseLetter,
-  upperLetter: getRandomUppercaseLetter,
-  number: getRandomNumber,
-  symbol: getRandomSymbol,
-};
-
+//My additions, still working: 
+//confirm("Would you like the password to contain number?")
 
 //Variable for symbol characters to use in getRandomSymbol function.
 var symbols = "!#$%&'()]*+,-./:;<=>?@[^_`{|}~"
@@ -47,3 +59,6 @@ function getRandomNumber() {
 function getRandomSymbol() {
   return symbols[Math.floor(Math.random() * symbols.length)]
 }
+
+
+
