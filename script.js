@@ -16,20 +16,12 @@ function writePassword() {
   passwordText.value = password;
 }
 
-//Prompts user and generates password based on if "confirm questions" are true (okay) or false (cancelled)
+//Generates password based on confirmation criteria
 function generatePassword() {
   var numOfCharacters = prompt("How long would you like the password to be (8-128 characters)?"); 
 
   if (numOfCharacters != null && numOfCharacters != '' && (numOfCharacters > 7) && (numOfCharacters < 129)) {
-    isNumberIncluded = confirm("Would you like the password to contain numbers?");
-    isLowercaseIncluded = confirm("Would you like the password to contain lowercase letters?");
-    isUppercaseIncluded = confirm("Would you like the password to contain uppercase letters?");
-    isSymbolIncluded = confirm("Would you like the password to contain symbols?");
-    
-    if (!isNumberIncluded && !isLowercaseIncluded && !isUppercaseIncluded && !isSymbolIncluded) {
-      alert("You must choose at least one character type");
-      generatePassword();
-    }
+    confirmTypes();
     return getRandomPassword(numOfCharacters);
   }
   else if (numOfCharacters === null) { //clicking cancel produces null
@@ -37,6 +29,19 @@ function generatePassword() {
   }
   else  {
     generatePassword(); //reprompts you if you don't enter anything
+  }
+}
+
+//Prompts user to confirm which types are included in generated password above
+function confirmTypes() {
+  isNumberIncluded = confirm("Would you like the password to contain numbers?");
+  isLowercaseIncluded = confirm("Would you like the password to contain lowercase letters?");
+  isUppercaseIncluded = confirm("Would you like the password to contain uppercase letters?");
+  isSymbolIncluded = confirm("Would you like the password to contain symbols?");
+
+  if (!isNumberIncluded && !isLowercaseIncluded && !isUppercaseIncluded && !isSymbolIncluded) {
+    alert("You must choose at least one character type");
+    generatePassword();
   }
 }
 
