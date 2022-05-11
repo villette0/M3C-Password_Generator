@@ -86,8 +86,8 @@ function getRandomUppercaseLetter() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
 
-var symbols = "!#$%&'()]*+,-./:;<=>?@[^_`{|}~" 
 function getRandomSymbol() {
+  var symbols = "!#$%&'()]*+,-./:;<=>?@[^_`{|}~" 
   return symbols[Math.floor(Math.random() * symbols.length)]
 }
 
