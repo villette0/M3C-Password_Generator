@@ -1,14 +1,14 @@
-// Assignment Code
+// Assignment Code, universal variables
 var generateBtn = document.querySelector("#generate");
 var isNumberIncluded; 
 var isLowercaseIncluded;
 var isUppercaseIncluded;
 var isSymbolIncluded;  
 
-// Add event listener to generate button
+// Adds event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// Write password to the #password input
+// Writes password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -24,11 +24,11 @@ function generatePassword() {
     confirmTypes();
     return getRandomPassword(numOfCharacters);
   }
-  else if (numOfCharacters === null) { //clicking cancel produces null
+  else if (numOfCharacters === null) { //clicking cancel produces null, so if they choose cancel it exists popup back to main screen
     return;
   }
   else  {
-    generatePassword(); //reprompts you if you don't enter anything
+    generatePassword(); //reprompts user if they don't enter anything
   }
 }
 
@@ -41,11 +41,11 @@ function confirmTypes() {
 
   if (!isNumberIncluded && !isLowercaseIncluded && !isUppercaseIncluded && !isSymbolIncluded) {
     alert("You must choose at least one character type");
-    generatePassword();
+    generatePassword();  //reprompts user from the beginning if they don't select any character type
   }
 }
 
-//Overall function for password creation
+//Function for password creation length
 function getRandomPassword(numOfCharacters) {
   var newPassword = "";
   for (var i = 0; i < numOfCharacters; i++) {
@@ -55,7 +55,7 @@ function getRandomPassword(numOfCharacters) {
   return newPassword;
 }
 
-//Checking if each question is true, and pushing to a randomized, combined array
+//Checking if each character type question is true, and pushing to a randomized, combined array
 function getRandomCharacter() {
   var characterArray = [];
   if (isNumberIncluded) {

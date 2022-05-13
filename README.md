@@ -1,10 +1,10 @@
 # Password Generator
 
 ## Website Description
-The website is a password generator which can take user selections of whether they would like to include numbers, symbols, lowercase or uppercase letters. The password appears in the central box on the screen after selected input is included. 
+The website is a password generator which can take user selections of whether they would like to include numbers, symbols, lowercase or uppercase letters in a 8-128 character password. The password appears in the central box on the screen after selected input is included. 
 
-## Challenge Dsescription
-
+## Challenge Description
+After being given starter code with an HTML and CSS webpage, JavaScript is added to add functionality to the password generator. After pressing the initial generate button, multiple prompts/alerts/and confirms are popped up onto the user's screen to ask them character length (8-128 characters), and whether they want numbers, symbols, and upper or lowercase letters. The user is instructed to select at least one character style if none are selected. The password then appears in the box. This is done using mulitple functions, arrays, and if/else statements in the JavaScript file. 
 
 ## User Story
 
@@ -35,29 +35,25 @@ THEN the password is either displayed in an alert or written to the page
 ```
 
 ## Tasks Completed
-The HTML document includes:
-* a proper title and SEO metadata
+The starter code HTML document includes:
+* a proper title
 * proper HTML semantic labelling
-* alt attributes of images for accessibility
-* photo, about me, work samples, and contact information
-* internal links that scroll to corresponding sections
-* external links to projects
-* placeholders for future projects
+* a header, titled box with placeholder text for the password, and generate password button
 * comments
 
-The CSS document includes:
-* an organized structure that matches the HTML order
-* variables for repetitive values
-* flex and media queries for a responsive layout
-* a grid with the first project the largest size
-* comments
+The starter code CSS document includes:
+* universal, elemental, class, and id selectors
+* stylization for the header, main box, and inner text output box
+* media-queries for various screen sizes
 
 The JavaScript document includes:
-* an organized structure that matches the HTML order
-* variables for repetitive values
-* flex and media queries for a responsive layout
-* a grid with the first project the largest size
-* comments
+* universal variables
+* "click" event listener
+* writePassword function which includes character length input and generatePassword function
+* generatePassword function which includes confirmation pop-ups for each character type 
+* getRandomPassword function which selects how many characters should be used based on user input of 8-128
+* getRandomCharacter function which adds each type of character to an array if the user chooses that character type
+* functions for outputting random characters from each type (numbers, symbols, upper & lowercase letters)
 
 ## Languages
 - HTML
@@ -67,7 +63,7 @@ The JavaScript document includes:
 ## Links
 * [Deployed webpage](https://villettec.github.io/Module_3_Challenge-Password_Generator/)
 
-* [Repository](https://github.com/villettec/Module_3_Challenge-Password_Generator)
+* [Repository](https://github.com/villettec/Module_3_Challenge-Password_Generator/)
 
 ## Screenshot
 ![image](./assets/images/readme-screenshot.png)

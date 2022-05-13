@@ -1,3 +1,4 @@
+/* Universal selectors */
 *,
 *::before,
 *::after {
@@ -17,6 +18,7 @@ body {
   background-color: #f9fbfd;
 }
 
+/* Stylizes the main area of the page into the center */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
@@ -30,6 +32,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* Produces a white box centered on the screen, under the header*/
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -42,6 +45,7 @@ header {
   padding: 30px 40px;
 }
 
+/* Area at top of main box which reads "Generate a Password" */
 .card-header::after {
   content: " ";
   display: block;
@@ -50,10 +54,12 @@ header {
   height: 2px;
 }
 
+/* Body area of main box containing inner text output box (which is in an ID below #password) */
 .card-body {
   min-height: 100px;
 }
 
+/* Area surrounding button */
 .card-footer {
   text-align: center;
 }
@@ -72,6 +78,7 @@ header {
   clear: both;
 }
 
+/* Stylizes the Generate Password button at the bottom of the main central box */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -97,6 +104,7 @@ button[disabled] {
   float: right;
 }
 
+/* Text output box where the password will show, initially has placeholder text */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -118,6 +126,7 @@ button[disabled] {
   overflow: hidden;
 }
 
+/* Changes appearance for various screen sizes */
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
