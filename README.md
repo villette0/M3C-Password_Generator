@@ -61,9 +61,9 @@ The JavaScript document includes:
 - JavaScript
 
 ## Links
-* [Deployed webpage](https://villettec.github.io/Module_3_Challenge-Password_Generator/)
+* [Deployed webpage](https://villettec.github.io/M3C-Password_Generator/)
 
-* [Repository](https://github.com/villettec/Module_3_Challenge-Password_Generator/)
+* [Repository](https://github.com/villettec/M3C-Password_Generator/)
 
 ## Screenshot
 ![image](./assets/images/readme-screenshot.png)
