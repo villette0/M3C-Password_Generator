@@ -61,14 +61,11 @@ The JavaScript document includes:
 - JavaScript
 
 ## Links
-* [Deployed webpage](https://villettec.github.io/M3C-Password_Generator/)
+* [Deployed webpage](https://villette0.github.io/M3C-Password_Generator/)
 
-* [Repository](https://github.com/villettec/M3C-Password_Generator/)
+* [Repository](https://github.com/villette0/M3C-Password_Generator/)
 
 ## Screenshot
 ![image](./assets/images/readme-screenshot.png)
 
-## Credit
-Villette Comfort
 
-villette@live.com
